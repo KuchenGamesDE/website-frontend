@@ -1,0 +1,80 @@
+export default [
+  {
+    name: "Attic9",
+    category: "leader",
+    rank: "Inhaber",
+    uuid: "",
+  },
+  {
+    name: "RedPanda",
+    category: "leader",
+    rank: "Inhaber",
+    uuid: "",
+  },
+  {
+    name: "Apex",
+    category: "leader",
+    rank: "Administrator",
+    uuid: "",
+  },
+  {
+    name: "r3dspace",
+    category: "leader",
+    rank: "Administrator",
+    uuid: "",
+  },
+  {
+    name: "Thomas",
+    category: "developers",
+    rank: "Senior-Developer",
+    uuid: "",
+  },
+  {
+    name: "Lucifer",
+    category: "developers",
+    rank: "Developer",
+    uuid: "a6a85419-f0d1-45f0-afa0-cb1396cfaa8f",
+  },
+  {
+    name: "smibii",
+    category: "developers",
+    rank: "Junior-Developer",
+    uuid: "",
+  },
+  {
+    name: "Jessica_Melody",
+    category: "builders",
+    rank: "Builder",
+    uuid: "",
+  },
+  {
+    name: "mmlp12345",
+    category: "builders",
+    rank: "Builder",
+    uuid: "",
+  },
+  {
+    name: "Xinon",
+    category: "helpers",
+    rank: "Content",
+    uuid: "",
+  },
+  {
+    name: "Luca",
+    category: "helpers",
+    rank: "Supporter",
+    uuid: "",
+  },
+  {
+    name: "Marc",
+    category: "helpers",
+    rank: "Supporter",
+    uuid: "",
+  },
+  {
+    name: "BlackUnityGamer",
+    category: "helpers",
+    rank: "Supporter",
+    uuid: "",
+  },
+];
