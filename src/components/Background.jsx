@@ -1,4 +1,4 @@
-import headerBackground from "../assets/images/bg-header.jpg";
+import headerBackground from "../assets/images/bg-header.png";
 
 export default function Background() {
   return (
