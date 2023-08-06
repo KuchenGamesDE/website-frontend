@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="min-h-[60vh] pt-[70px] flex flex-col items-center justify-center text-white">
+    <div className="pt-[70px] pb-10 flex flex-col items-center justify-center text-white">
       <div className="flex flex-col items-center justify-center w-[90vw] md:w-[70vw]">
         <h3 className="font-semibold">KUCHENGAMES.DE</h3>
         <h1 className="font-extrabold md:text-5xl text-3xl">
