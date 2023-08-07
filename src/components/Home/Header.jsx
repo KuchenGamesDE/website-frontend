@@ -49,7 +49,7 @@ export default function Header() {
       </div>
       <div className="min-h-[calc(80vh)] flex flex-col items-center justify-center w-[90vw] md:w-[35vw]">
         <img
-          className="h-[200px] w-[200px] animate-bounce"
+          className="max-w-[400px] float"
           src={Logo}
           alt="Logo"
         />
