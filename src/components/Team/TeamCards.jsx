@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { BsThreeDots } from "react-icons/bs"
+import Info from "./Info";
+
 export default function TeamCards({ members, roles }) {
 
     const skin_api_uri = "https://mc-heads.net/head/"
@@ -21,60 +24,81 @@ export default function TeamCards({ members, roles }) {
                 const role_color = role_data ? role_data.color : "#f07b0781"
 
                 return (
-                    <div
-                        title={role_name}
-                        key={name}
-                        className="relative w-[120px] transition-all m-2 flex flex-col items-center bg-[#5d5e61] cursor-pointer rounded-md hover:text-[white]"
-                        onMouseEnter={() => {setIsHovered(true)}}
-                        onMouseLeave={() => {setIsHovered(false)}}
-                        style={{
-                            background: isHovered
-                                ? role_color
-                                : "#5d5e618d",
-                            height: isHovered
-                                ? "120px"
-                                : "140px",
-                            marginBottom: isHovered
-                                ? "20px"
-                                : "0"
-                        }}
-                    >
+                    <>
                         <div
-                            className="px-5 pt-3 transition-all"
+                            key={name}
+                            className="relative w-[120px] transition-all duration-500 m-2 flex flex-col items-center bg-[#5d5e61] border-[#46484c] border-2 cursor-pointer rounded-md hover:text-[white]"
+                            onMouseEnter={() => { setIsHovered(true) }}
+                            onMouseLeave={() => { setIsHovered(false) }}
+                            onClick={() => { Info.open(member, roles) }}
                             style={{
-                                width: isHovered
-                                    ? "100px"
-                                    : "120px",
-                                opacity: isHovered
-                                    ? "0.7"
-                                    : "1"
+                                background: isHovered
+                                    ? role_color
+                                    : "#5d5e618d",
+                                height: isHovered
+                                    ? "120px"
+                                    : "140px",
+                                marginBottom: isHovered
+                                    ? "20px"
+                                    : "0"
                             }}
                         >
-                            <img src={`${skin_api_uri}${uuid}`} alt="" />
-                        </div>
-                        <div
-                            className="font-bold text-sm pb-2 pt-3"
-                        >
-                            {name}
-                        </div>
-                        <div
-                            className="absolute w-full h-full flex justify-center"
-                        >
                             <div
-                                className="font-bold text-sm mt-auto transition-all px-2 rounded-b-md"
+                                className="px-5 pt-3 transition-all duration-500"
                                 style={{
-                                    translate: isHovered
-                                        ? "0 20px"
-                                        : "0 0px",
-                                    color: isHovered
-                                        ? "white"
-                                        : "transparent"
+                                    width: isHovered
+                                        ? "100px"
+                                        : "120px",
+                                    opacity: isHovered
+                                        ? "0.7"
+                                        : "1"
                                 }}
                             >
-                                {role_name}
+                                <img src={`${skin_api_uri}${uuid}`} alt="skin" />
+                            </div>
+                            <div
+                                className="font-bold text-sm pb-2 pt-3 transition-all duration-500"
+                                style={{
+                                    fontSize: isHovered
+                                        ? "11px"
+                                        : "14px"
+                                }}
+                            >
+                                {name}
+                            </div>
+                            <div
+                                className="absolute w-full h-full flex justify-center"
+                            >
+                                <div
+                                    className="font-bold text-sm mt-auto transition-all duration-500 px-2 rounded-b-md"
+                                    style={{
+                                        translate: isHovered
+                                            ? "0 20px"
+                                            : "0 0",
+                                        color: isHovered
+                                            ? "white"
+                                            : "transparent"
+                                    }}
+                                >
+                                    {role_name}
+                                </div>
+                            </div>
+                            <div
+                                className="absolute w-full h-full flex justify-center"
+                            >
+                                <div
+                                    className="m-auto transition-all duration-500"
+                                    style={{
+                                        opacity: isHovered
+                                            ? ".8"
+                                            : "0"
+                                    }}
+                                >
+                                    <BsThreeDots size={40} color="white" />
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </>
                 )
 
             })}

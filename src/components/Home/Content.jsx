@@ -92,7 +92,7 @@ export default function Content() {
             </section>
 
             <section className="p-3 w-screen min-h-[60vh] flex flex-col justify-center items-center">
-                <div className="m-2 flex flex-col justify-center md:w-[50vw] w-[90vw]">
+                <div className="m-2 flex flex-col text-center items-center justify-center md:w-[50vw] w-[90vw]">
                     <h2 className="text-xl font-bold">
                         <span className="relative p-1 m-2 after:absolute after:h-[3px] after:w-[70%] after:bottom-[-1px] after:left-[0] after:bg-[var(--main-color)] aaa before:absolute before:h-[1px] before:w-full before:bottom-[-1px] before:left-[0] before:bg-[var(--white-color)]">
                             Probleme?
@@ -100,16 +100,14 @@ export default function Content() {
                     </h2>
                     <p className="p-1 m-2 text-[var(--description-color)] text-lg">
                         Wenn du irgendwelche Fragen oder Probleme hast kannst du gerne unserem Discordserver beitreten.
-                        <br />
-                        <br />
-                        <Link
-                            to="https://discord.kuchengames.de"
-                            target="_blank"
-                            className="flex flex-row justify-center w-[300px] items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-l px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                        >
-                            <FaDiscord className="mr-3" size="1.5rem" /> Beitreten
-                        </Link>
                     </p>
+                    <Link
+                        to="https://discord.kuchengames.de"
+                        target="_blank"
+                        className="flex flex-row justify-center w-[300px] items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-l px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    >
+                        <FaDiscord className="mr-3" size="1.5rem" /> Beitreten
+                    </Link>
                 </div>
             </section>
 
@@ -143,7 +141,7 @@ export default function Content() {
                 </div>
             </section>
 
-            <section className="p-3 w-screen min-h-[60vh] bg-[var(--s2-background)] flex flex-col justify-center items-center">
+            <section className="p-3 w-screen min-h-[60vh] flex flex-col justify-center items-center">
                 <div className="m-2 mb-5 flex flex-col justify-center items-center md:w-[50vw] w-[90vw]">
                     <h2 className="text-xl font-bold">
                         <span className="relative p-1 m-2 after:absolute after:h-[3px] after:w-[70%] after:bottom-[-1px] after:left-[0] after:bg-[var(--main-color)] aaa before:absolute before:h-[1px] before:w-full before:bottom-[-1px] before:left-[0] before:bg-[var(--white-color)]">

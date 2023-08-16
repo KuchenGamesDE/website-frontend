@@ -15,7 +15,7 @@ export default function Header() {
           KUCHENGAMES.DE
         </h1>
         <div className="h-1 w-full bg-gray-700 my-4"></div>
-        <p className="text-[var(--description-color)]">
+        <p className="text-[var(--white-color)] drop-shadow-lg">
           Bereit, deine eigene Stadt zu bauen? Auf unserem Minecraft Citybuild
           kannst du zeigen, was in dir steckt! Hier darfst du gerne kreativ sein
           und einzigartige Gebäude errichten - solange sie nicht zu sehr in die
@@ -24,7 +24,7 @@ export default function Header() {
         </p>
         <br />
 
-        <p className="text-[var(--description-color)]">
+        <p className="text-[var(--white-color)]">
           Tritt uns bei und Spiele mit deinen Freunden
         </p>
         <div className="w-full mt-4 flex flex-row items-center justify-around">
@@ -35,7 +35,7 @@ export default function Header() {
                 toast.success("🍰 IP erfolgreich kopiert!");
               } else toast.error("🍰 Error!");
             }}
-            className="bg-green-500 hover:bg-green-400 text-green-800 font-bold py-2 px-4 rounded inline-flex items-center"
+            className="bg-[#07bc0c] hover:bg-[#2c722f] text-[black] hover:text-[white] transition-all font-bold py-2 px-4 rounded inline-flex items-center"
           >
             <span>IP Kopieren</span>
           </button>
