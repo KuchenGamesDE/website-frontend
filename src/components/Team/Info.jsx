@@ -14,6 +14,10 @@ const open = (member, roles) => {
     const role_name = role_data ? role_data.name : "Undefined"
     const role_color = role_data ? role_data.color : "#f07b0781"
 
+    window.addEventListener('keydown', (e) => {
+        if (e.keyCode === 27) close()
+    })
+
     let InfoContent = () => {
         return (
             <div
