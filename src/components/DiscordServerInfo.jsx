@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 
-const URL = `https://discord.com/api/guilds/993855292448198756/widget.json`;
-
-export async function getData() {
-  const response = await fetch(URL, { method: "GET", mode: "no-cors" }).catch(
-    () => {},
-  );
-  if (!response || response.status !== 200) return false;
-
-  const data = await response.json().catch(() => {});
-
-  return data;
+async function getData() {
+  return new Promise((resolve, reject) => {
+    fetch(
+      `https://discord.com/api/guilds/993855292448198756/widget.json`,
+      {
+        method: "GET",
+      },
+      10000,
+    )
+      .then((res) => res.json())
+      .then(resolve)
+      .catch(reject);
+  });
 }
 
 export default function DiscordServerInfo() {
@@ -18,15 +20,12 @@ export default function DiscordServerInfo() {
 
   // data.members ( array )
 
-  async function init() {
-    let initialData = await getData().catch(() => {});
-    if (!initialData) return setTimeout(init, 60000);
-
-    setCount(initialData?.members?.length || 0);
-  }
-
   useEffect(() => {
-    init();
+    getData()
+      .then((data) => {
+        setCount(data?.presence_count || 0);
+      })
+      .catch(console.error);
   }, []);
 
   return (
