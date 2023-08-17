@@ -28,7 +28,8 @@ export default function TeamLayout() {
                   {name}
                 </span>
               </div>
-              <div className="mx-1 mb-7 mt-3 p-5 bg-[#ffffff1e] rounded-md flex justify-center">
+
+              <div className="mx-1 mb-7 mt-3 p-5 bg-[#ffffff1e] rounded-md flex justify-center items-center">
                 <TeamCards members={members} roles={roles} />
               </div>
             </div>
