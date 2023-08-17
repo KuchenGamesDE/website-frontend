@@ -1,7 +1,4 @@
-import {
-  BiDownArrowCircle,
-  BiUpArrowCircle,
-} from "react-icons/bi";
+import { BiDownArrowCircle, BiUpArrowCircle } from "react-icons/bi";
 
 export default function AccordionLayout({
   title,
@@ -19,9 +16,7 @@ export default function AccordionLayout({
         onClick={() => handleSetIndex(index)}
         className="cursor-pointer border-[#ffffff2d] border-[1px] transition-all w-[90vw] flex justify-between py-3 px-5 mt-2 rounded hover:bg-[#2b314e81] bg-[#0d0f1881] backdrop-blur-md"
         style={{
-          borderRadius: activeIndex === index
-            ? "5px 5px 0 0"
-            : "5px"
+          borderRadius: activeIndex === index ? "5px 5px 0 0" : "5px",
         }}
       >
         <div className="flex w-full justify-center">

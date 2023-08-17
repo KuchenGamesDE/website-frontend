@@ -48,11 +48,7 @@ export default function Header() {
         </div>
       </div>
       <div className="min-h-[calc(80vh)] flex flex-col items-center justify-center w-[90vw] md:w-[35vw]">
-        <img
-          className="max-w-[400px] float"
-          src={Logo}
-          alt="Logo"
-        />
+        <img className="max-w-[400px] float" src={Logo} alt="Logo" />
 
         <div className="mt-4 p-4 w-full flex flex-row items-center justify-around bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
           <DiscordServerInfo />

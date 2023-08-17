@@ -12,6 +12,7 @@ export default function FAQAccordion() {
       {data.map((faqElement, i) => {
         return (
           <AccordionLayout
+            key={i + 1}
             title={faqElement.title}
             index={i + 1}
             activeIndex={activeIndex}
