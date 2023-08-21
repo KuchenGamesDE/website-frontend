@@ -14,22 +14,22 @@ export default function Navbar() {
             </div>
 
             <div className="items-left mb-2 flex flex-row justify-start">
-                <Link target="_blank" to="https://discord.kuchengames.de" className="p-2 text-[var(--main-color)]">
+                <Link target="_blank" to="https://discord.kuchengames.de" className="p-2 text-[var(--main-color)] hover:text-[var(--description-color)]">
                     <FaDiscord className="mr-1" size="1.5rem" />
                 </Link>
-                <Link target="_blank" to="https://github.com/kuchengamesde" className="p-2 text-[var(--main-color)]">
+                <Link target="_blank" to="https://github.com/kuchengamesde" className="p-2 text-[var(--main-color)] hover:text-[var(--description-color)]">
                     <FaGithub className="mr-1" size="1.5rem" />
                 </Link>
-                <Link target="_blank" to="https://www.tiktok.com/@kuchengames.de" className="p-2 text-[var(--main-color)]">
+                <Link target="_blank" to="https://www.tiktok.com/@kuchengames.de" className="p-2 text-[var(--main-color)] hover:text-[var(--description-color)]">
                     <FaTiktok className="mr-1" size="1.5rem" />
                 </Link>
-                <Link target="_blank" to="https://www.instagram.com/kuchengames" className="p-2 text-[var(--main-color)]">
+                <Link target="_blank" to="https://www.instagram.com/kuchengames" className="p-2 text-[var(--main-color)] hover:text-[var(--description-color)]">
                     <FaInstagram className="mr-1" size="1.5rem" />
                 </Link>
-                <Link target="_blank" to="https://twitter.com/KuchenGamesDE" className="p-2 text-[var(--main-color)]">
+                <Link target="_blank" to="https://twitter.com/KuchenGamesDE" className="p-2 text-[var(--main-color)] hover:text-[var(--description-color)]">
                     <FaTwitter className="mr-1" size="1.5rem" />
                 </Link>
-                <Link target="_blank" to="https://www.youtube.com/@KuchenGamesDE" className="p-2 text-[var(--main-color)]">
+                <Link target="_blank" to="https://www.youtube.com/@KuchenGamesDE" className="p-2 text-[var(--main-color)] hover:text-[var(--description-color)]">
                     <FaYoutube className="mr-1" size="1.5rem" />
                 </Link>
             </div>
