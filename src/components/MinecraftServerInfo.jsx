@@ -32,7 +32,7 @@ export default function MinecraftServerInfo() {
         <div className="flex flex-row items-center justify-center">
             <div className="text-white"></div>
             <div className="text-white">
-                <p className="font-bold font-lg">MINECRAFT SERVER</p>
+                <p className="font-lg font-bold">MINECRAFT SERVER</p>
                 <p className="text-[var(--description-color)]">
                     {count > 0 ? (
                         <>

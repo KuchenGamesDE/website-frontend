@@ -56,11 +56,11 @@ const open = (member, roles) => {
 
     let InfoContent = () => {
         return (
-            <div className="min-w-[300px] fixed flex w-full h-full bg-[#00000027] backdrop-blur-sm z-10 justify-center">
-                <div className="bg-[#46484c] relative pt-8 m-auto p-5 rounded-md flex lg:flex-row flex-col">
-                    <AiOutlineCloseSquare size={35} className="absolute top-1 right-1 cursor-pointer text-white  hover:text-gray" onClick={close} />
+            <div className="fixed z-10 flex h-full w-full min-w-[300px] justify-center bg-[#00000027] backdrop-blur-sm">
+                <div className="relative m-auto flex flex-col rounded-md bg-[#46484c] p-5 pt-8 lg:flex-row">
+                    <AiOutlineCloseSquare size={35} className="hover:text-gray absolute right-1 top-1 cursor-pointer  text-white" onClick={close} />
                     <div className="flex flex-col justify-center">
-                        <div className="flex flex-col ml-5 my-auto">
+                        <div className="my-auto ml-5 flex flex-col">
                             <div className="flex font-bold">{name}</div>
                             <div
                                 className="text-[13px]/[12px]"
@@ -72,13 +72,13 @@ const open = (member, roles) => {
                             </div>
                         </div>
                         <hr className="my-2 h-1 bg-[var(--white-color)]" />
-                        <div className="ww-[50px] w-full my-auto">
+                        <div className="ww-[50px] my-auto w-full">
                             <ReactSkinview3d
                                 skinUrl={`${skin_api_uri}${uuid}`}
                                 capeUrl=""
                                 height="400"
                                 width="250"
-                                className="bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"
+                                className="rounded-md bg-gray-400 bg-opacity-10 bg-clip-padding backdrop-blur-lg backdrop-filter"
                                 onReady={({ viewer }) => {
                                     viewer.fov = 70;
                                     viewer.zoom = 0.7;
@@ -88,8 +88,8 @@ const open = (member, roles) => {
                             />
                         </div>
                     </div>
-                    <div className="bg-[#5d5e61] ml-0 lg:ml-5 p-5 lg:mt-0 mt-5 rounded-md max-w-[250px] flex whitespace-pre-wrap">
-                        <div className="text-center my-auto">{info}</div>
+                    <div className="ml-0 mt-5 flex max-w-[250px] whitespace-pre-wrap rounded-md bg-[#5d5e61] p-5 lg:ml-5 lg:mt-0">
+                        <div className="my-auto text-center">{info}</div>
                     </div>
                 </div>
             </div>

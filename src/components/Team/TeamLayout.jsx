@@ -19,14 +19,14 @@ export default function TeamLayout() {
                     }
 
                     return (
-                        <div key={name} className="md:w-[80%] xl:w-[50%] w-[100%] transition-all flex flex-col">
-                            <div className="w-full flex">
-                                <span className="mx-auto font-bold px-5 text-2xl relative p-1 m-2 after:absolute after:h-[3px] after:w-[70%] after:bottom-[-1px] after:left-[0] after:bg-[var(--main-color)] before:absolute before:h-[1px] before:w-full before:bottom-[-1px] before:left-[0] before:bg-[var(--white-color)]">
+                        <div key={name} className="flex w-[100%] flex-col transition-all md:w-[80%] xl:w-[50%]">
+                            <div className="flex w-full">
+                                <span className="relative m-2 mx-auto p-1 px-5 text-2xl font-bold before:absolute before:bottom-[-1px] before:left-[0] before:h-[1px] before:w-full before:bg-[var(--white-color)] after:absolute after:bottom-[-1px] after:left-[0] after:h-[3px] after:w-[70%] after:bg-[var(--main-color)]">
                                     {name}
                                 </span>
                             </div>
 
-                            <div className="mx-1 mb-7 mt-3 p-5 bg-[#ffffff1e] rounded-md flex justify-center items-center">
+                            <div className="mx-1 mb-7 mt-3 flex items-center justify-center rounded-md bg-[#ffffff1e] p-5">
                                 <TeamCards members={members} roles={roles} />
                             </div>
                         </div>

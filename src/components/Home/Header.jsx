@@ -8,11 +8,11 @@ import Logo from '../../assets/images/logo.png';
 
 export default function Header() {
     return (
-        <div className="min-h-[calc(100vh-70px)] flex md:flex-row flex-col items-center justify-around text-white">
-            <div className="min-h-[calc(80vh)] flex flex-col items-left justify-center w-[90vw] md:w-[35vw]">
+        <div className="flex min-h-[calc(100vh-70px)] flex-col items-center justify-around text-white md:flex-row">
+            <div className="items-left flex min-h-[calc(80vh)] w-[90vw] flex-col justify-center md:w-[35vw]">
                 <h3 className="font-semibold">MINECRAFT CITYBUILD NETZWERK</h3>
-                <h1 className="font-extrabold md:text-5xl text-3xl text-[var(--main-color)]">KUCHENGAMES.DE</h1>
-                <div className="h-1 w-full bg-gray-700 my-4"></div>
+                <h1 className="text-3xl font-extrabold text-[var(--main-color)] md:text-5xl">KUCHENGAMES.DE</h1>
+                <div className="my-4 h-1 w-full bg-gray-700"></div>
                 <p className="text-[var(--white-color)] drop-shadow-lg">
                     Bereit, deine eigene Stadt zu bauen? Auf unserem Minecraft Citybuild kannst du zeigen, was in dir steckt! Hier darfst du gerne kreativ sein und einzigartige
                     Gebäude errichten - solange sie nicht zu sehr in die Höhe ragen und unseren Server zum Absturz bringen. Wirf schon mal deinen Bauplan an und bleib dran für
@@ -21,7 +21,7 @@ export default function Header() {
                 <br />
 
                 <p className="text-[var(--white-color)]">Tritt uns bei und Spiele mit deinen Freunden</p>
-                <div className="w-full mt-4 flex flex-row items-center justify-around">
+                <div className="mt-4 flex w-full flex-row items-center justify-around">
                     <button
                         onClick={() => {
                             if (navigator?.clipboard) {
@@ -29,22 +29,22 @@ export default function Header() {
                                 toast.success('🍰 IP erfolgreich kopiert!');
                             } else toast.error('🍰 Error!');
                         }}
-                        className="bg-[#07bc0c] hover:bg-[#2c722f] text-[black] hover:text-[white] transition-all font-bold py-2 px-4 rounded inline-flex items-center"
+                        className="inline-flex items-center rounded bg-[#07bc0c] px-4 py-2 font-bold text-[black] transition-all hover:bg-[#2c722f] hover:text-[white]"
                     >
                         <span>IP Kopieren</span>
                     </button>
                     <Link
                         to="https://discord.kuchengames.de"
-                        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center border-1 border-white"
+                        className="border-1 inline-flex items-center rounded border-white bg-gray-300 px-4 py-2 font-bold text-gray-800 hover:bg-gray-400"
                     >
                         <span>Discord beitreten</span>
                     </Link>
                 </div>
             </div>
-            <div className="min-h-[calc(80vh)] flex flex-col items-center justify-center w-[90vw] md:w-[35vw]">
-                <img className="max-w-[400px] float" src={Logo} alt="Logo" />
+            <div className="flex min-h-[calc(80vh)] w-[90vw] flex-col items-center justify-center md:w-[35vw]">
+                <img className="float max-w-[400px]" src={Logo} alt="Logo" />
 
-                <div className="mt-4 p-4 w-full flex flex-row items-center justify-around bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
+                <div className="mt-4 flex w-full flex-row items-center justify-around rounded-md bg-gray-400 bg-opacity-10 bg-clip-padding p-4 backdrop-blur-lg backdrop-filter">
                     <DiscordServerInfo />
                     <MinecraftServerInfo />
                 </div>

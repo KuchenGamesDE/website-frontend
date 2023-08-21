@@ -36,7 +36,7 @@ export default function ScrollToTop() {
                 onClick={scrollToTop}
                 className={classNames(
                     isVisible ? 'opacity-100' : 'opacity-0',
-                    'cursor-pointer bg-zinc-800 hover:shadow-lg shadow-sm hover:text-[var(--main-color)] shadow-[var(--main-color)] hover:shadow-[var(--main-color)] focus:ring-0 border-transparent focus:border-transparent inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:ring-2 focus:ring-[var(--accent-color)] focus:outline-none'
+                    'inline-flex cursor-pointer items-center rounded-full border-transparent bg-zinc-800 p-3 text-white shadow-sm shadow-sm shadow-[var(--main-color)] transition-opacity hover:text-[var(--main-color)] hover:shadow-lg hover:shadow-[var(--main-color)] focus:border-transparent focus:outline-none focus:ring-0 focus:ring-2 focus:ring-[var(--accent-color)]'
                 )}
             >
                 <BiArrowFromBottom className="h-6 w-6" aria-hidden="true" />

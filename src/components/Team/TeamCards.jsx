@@ -17,9 +17,9 @@ export default function TeamCards({ members, roles }) {
     const paginatedMembers = paginateArray(members, 5);
 
     return (
-        <div className="flex flex-wrap justify-center items-center">
+        <div className="flex flex-wrap items-center justify-center">
             {paginatedMembers.map((rowMembers, rowIndex) => (
-                <div key={'row-' + rowIndex} className="flex flex-wrap justify-center items-center">
+                <div key={'row-' + rowIndex} className="flex flex-wrap items-center justify-center">
                     {rowMembers.map((member) => {
                         const [isHovered, setIsHovered] = useState(false);
 
@@ -34,7 +34,7 @@ export default function TeamCards({ members, roles }) {
                         return (
                             <div
                                 key={name}
-                                className="relative w-[120px] transition-all duration-500 m-2 flex flex-col items-center bg-[#5d5e61] border-[#46484c] border-2 cursor-pointer rounded-md hover:text-[white]"
+                                className="relative m-2 flex w-[120px] cursor-pointer flex-col items-center rounded-md border-2 border-[#46484c] bg-[#5d5e61] transition-all duration-500 hover:text-[white]"
                                 onMouseEnter={() => {
                                     setIsHovered(true);
                                 }}
@@ -60,16 +60,16 @@ export default function TeamCards({ members, roles }) {
                                     <img src={`${skin_api_uri}${uuid}`} alt="skin" />
                                 </div>
                                 <div
-                                    className="font-bold text-sm pb-2 pt-3 transition-all duration-500"
+                                    className="pb-2 pt-3 text-sm font-bold transition-all duration-500"
                                     style={{
                                         fontSize: isHovered ? '11px' : '14px'
                                     }}
                                 >
                                     {name}
                                 </div>
-                                <div className="absolute w-full h-full flex justify-center">
+                                <div className="absolute flex h-full w-full justify-center">
                                     <div
-                                        className="font-bold text-sm mt-auto transition-all duration-500 px-2 rounded-b-md"
+                                        className="mt-auto rounded-b-md px-2 text-sm font-bold transition-all duration-500"
                                         style={{
                                             translate: isHovered ? '0 20px' : '0 0',
                                             color: isHovered ? 'white' : 'transparent'
@@ -78,7 +78,7 @@ export default function TeamCards({ members, roles }) {
                                         {role_name}
                                     </div>
                                 </div>
-                                <div className="absolute w-full h-full flex justify-center">
+                                <div className="absolute flex h-full w-full justify-center">
                                     <div
                                         className="m-auto transition-all duration-500"
                                         style={{

@@ -5,15 +5,15 @@ import Logo from '../assets/images/logo.png';
 
 export default function Navbar() {
     return (
-        <footer className="p-3 flex flex-col items-left justify-start w-screen min-h-[150px] bg-zinc-900">
-            <div className="flex md:flex-row flex-col items-left justify-start">
-                <Link to="https://kuchengames.de" className="p-2 text-[var(--white-color)] hover:text-white flex-shrink-0 font-bold flex flex-row items-center">
+        <footer className="items-left flex min-h-[150px] w-screen flex-col justify-start bg-zinc-900 p-3">
+            <div className="items-left flex flex-col justify-start md:flex-row">
+                <Link to="https://kuchengames.de" className="flex flex-shrink-0 flex-row items-center p-2 font-bold text-[var(--white-color)] hover:text-white">
                     <img className="h-[70px] w-[70px]" src={Logo} alt="Workflow" />
                     <p className="ml-2 text-xl font-extrabold tracking-tight">KuchenGames</p>
                 </Link>
             </div>
 
-            <div className="flex flex-row items-left justify-start mb-2">
+            <div className="items-left mb-2 flex flex-row justify-start">
                 <Link target="_blank" to="https://discord.kuchengames.de" className="p-2 text-[var(--main-color)]">
                     <FaDiscord className="mr-1" size="1.5rem" />
                 </Link>
