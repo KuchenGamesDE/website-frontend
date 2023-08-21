@@ -21,9 +21,14 @@ export default {
             name: 'Content Team'
         },
         {
-            category: 'supporter',
+            category: 'moderator',
             weight: 60,
-            name: 'Helfende Hände'
+            name: 'Moderations Team'
+        },
+        {
+            category: 'supporter',
+            weight: 50,
+            name: 'Support Team'
         }
     ],
     roles: {
@@ -49,7 +54,7 @@ export default {
         },
         moderator: {
             name: 'Moderator',
-            color: '#0dd470'
+            color: '#4147d1'
         },
         supporter: {
             name: 'Supporter',
@@ -136,13 +141,6 @@ export default {
             info: "Hello, I'm Will.\n\nI'm passionate about building in Minecraft.\nI've been developing this skill for almost 1 year and 6 months, and I'm studying to reach the level of a level designer.\nI've had the honor of being part of studios like Null Forge and LegacyMC.\nMy passion for creating in Minecraft motivates me to keep learning and improving in this exciting world of virtual construction"
         },
         {
-            name: 'Fox_Highlander',
-            category: 'builder',
-            role: 'builder',
-            uuid: '5fdf40c0-e4ad-46da-85ab-058f8e05591d',
-            info: 'Keine info gegeben!'
-        },
-        {
             name: 'TheO',
             category: 'builder',
             role: 'builder',
@@ -165,7 +163,7 @@ export default {
         },
         {
             name: 'Marc',
-            category: 'supporter',
+            category: 'moderator',
             role: 'moderator',
             uuid: 'e3f8e6c3-5b35-4e30-8aa3-d5a5160c9cfd',
             info: 'Keine info gegeben!'
