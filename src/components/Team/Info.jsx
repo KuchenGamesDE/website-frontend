@@ -1,9 +1,45 @@
 import { createRoot } from 'react-dom/client';
+import { AiOutlineCloseSquare } from 'react-icons/ai';
+import ReactSkinview3d from 'react-skinview3d';
+import { IdleAnimation, WalkingAnimation, RunningAnimation, FunctionAnimation, NameTagObject } from 'skinview3d';
 
 var InfoRoot = undefined;
 
+// Create a FunctionAnimation for the entire sequence
+const animationDuration = 4000; // Animation duration in milliseconds
+const fullSequenceAnimation = new FunctionAnimation((player, deltaTime) => {
+    const currentTime = performance.now(); // Current time in milliseconds
+    const animationProgress = (currentTime % animationDuration) / animationDuration;
+
+    // Raise arm, wink, lower arm, and nod with head
+    const maxArmRotation = Math.PI / 3; // Maximum rotation angle for arm raising and lowering
+    const maxWinkRotation = Math.PI / 8; // Maximum rotation angle for winking
+    const maxHeadNod = Math.PI / 6; // Maximum rotation angle for head nodding
+
+    console.log(animationProgress);
+
+    if (animationProgress < 0.25) {
+        // Raise arm
+        player.skin.rightArm.rotation.x = -animationProgress * maxArmRotation * 4;
+    } else if (animationProgress < 0.5) {
+        // Wink from left to right
+        const winkProgress = (animationProgress - 0.25) * 4; // Adjust to a range of 0 to 1
+        player.skin.rightArm.rotation.x = -maxArmRotation;
+        player.skin.head.rotation.yaw = maxWinkRotation * Math.sin(Math.PI * winkProgress);
+    } else if (animationProgress < 0.75) {
+        // Lower arm
+        player.skin.rightArm.rotation.x = -maxArmRotation + (animationProgress - 0.5) * maxArmRotation * 4;
+        player.skin.head.rotation.yaw = 0;
+    } else {
+        // Nod with head
+        const nodProgress = (animationProgress - 0.75) * 4; // Adjust to a range of 0 to 1
+        player.skin.rightArm.rotation.x = 0;
+        player.skin.head.rotation.pitch = maxHeadNod * Math.sin(Math.PI * nodProgress);
+    }
+});
+
 const open = (member, roles) => {
-    const skin_api_uri = 'https://mc-heads.net/body/';
+    const skin_api_uri = 'https://mc-heads.net/skin/';
 
     const name = member.name;
     const role = member.role;
@@ -15,17 +51,15 @@ const open = (member, roles) => {
     const role_color = role_data ? role_data.color : '#f07b0781';
 
     window.addEventListener('keydown', (e) => {
-        if (e.keyCode === 27) close();
+        if (e.key === 'Escape') close();
     });
 
     let InfoContent = () => {
         return (
-            <div className="min-w-[300px] fixed flex w-full h-full bg-[#00000027] backdrop-blur-sm z-10 justify-center" onClick={close}>
-                <div className="bg-[#46484c] m-auto p-5 rounded-md flex lg:flex-row flex-col">
-                    <div className="flex flex-row justify-center">
-                        <div className="w-[50px] my-auto">
-                            <img src={`${skin_api_uri}${uuid}`} alt="skin" />
-                        </div>
+            <div className="min-w-[300px] fixed flex w-full h-full bg-[#00000027] backdrop-blur-sm z-10 justify-center">
+                <div className="bg-[#46484c] relative pt-8 m-auto p-5 rounded-md flex lg:flex-row flex-col">
+                    <AiOutlineCloseSquare size={35} className="absolute top-1 right-1 cursor-pointer text-white  hover:text-gray" onClick={close} />
+                    <div className="flex flex-col justify-center">
                         <div className="flex flex-col ml-5 my-auto">
                             <div className="flex font-bold">{name}</div>
                             <div
@@ -36,6 +70,22 @@ const open = (member, roles) => {
                             >
                                 {role_name}
                             </div>
+                        </div>
+                        <hr className="my-2 h-1 bg-[var(--white-color)]" />
+                        <div className="ww-[50px] w-full my-auto">
+                            <ReactSkinview3d
+                                skinUrl={`${skin_api_uri}${uuid}`}
+                                capeUrl=""
+                                height="400"
+                                width="250"
+                                className="bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"
+                                onReady={({ viewer }) => {
+                                    viewer.fov = 70;
+                                    viewer.zoom = 0.7;
+                                    viewer.nameTag = new NameTagObject(name, { textStyle: role_color });
+                                    viewer.animation = new WalkingAnimation();
+                                }}
+                            />
                         </div>
                     </div>
                     <div className="bg-[#5d5e61] ml-0 lg:ml-5 p-5 lg:mt-0 mt-5 rounded-md max-w-[250px] flex whitespace-pre-wrap">
