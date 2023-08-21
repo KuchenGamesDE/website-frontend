@@ -23,7 +23,7 @@ export default function Content() {
                         <p className="m-2 p-1 text-[var(--description-color)]">
                             KuchenGames.de ist ein deutscher Minecraft Citybuild Server, welcher seit dem Jahr 2020 aktiv in der Entwicklung ist!
                             <br />
-                            Wir zeichnen uns besonders durch unserer starken Zusammenarbeit mit unserer Community und der Vielfältigkeit unseres Citybuilds aus.
+                            Wir zeichnen uns besonders durch unsere starke Zusammenarbeit mit unserer Community und der Vielfältigkeit unseres Citybuilds aus.
                         </p>
                     </div>
                     <div className="m-2 flex flex-col justify-center">
