@@ -6,5 +6,5 @@ services:
     pull_policy: build
     container_name: node_kuchengames_website-frontend
     restart: unless-stopped
-    port:
+    ports:
       - ${EXPOSED_PORT}:8080
