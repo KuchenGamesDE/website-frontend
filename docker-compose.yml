@@ -1,9 +1,10 @@
 version: "3.9"
 
 services:
-  build: .
-  pull_policy: build
-  container_name: node_kuchengames_website-frontend
-  restart: unless-stopped
-  port:
-    - ${EXPOSED_PORT}:8080
+  nodejs:
+    build: .
+    pull_policy: build
+    container_name: node_kuchengames_website-frontend
+    restart: unless-stopped
+    port:
+      - ${EXPOSED_PORT}:8080
