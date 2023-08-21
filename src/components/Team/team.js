@@ -204,7 +204,7 @@ export default {
             info: 'Keine info gegeben!'
         },
         {
-            name: 'BlackUnitGamer',
+            name: 'BlackUnityGamer',
             category: 'supporter',
             role: 'supporter',
             uuid: 'ceb0a468-5e71-4f32-97df-e0e5c434527a',
