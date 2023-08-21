@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, createRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 import { Link } from 'react-router-dom';
@@ -23,7 +23,7 @@ export default function Navbar() {
             <nav className="bg-zinc-800">
                 <div className="mx-auto min-w-[90vw] px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 min-w-[90vw] items-center justify-between">
-                        <div className="flex min-w-[60vw] items-center justify-between md:min-w-[90vw]">
+                        <div ref={createRef()} className="flex min-w-[60vw] items-center justify-between md:min-w-[90vw]">
                             <Link
                                 to="https://kuchengames.de"
                                 className="flex flex-shrink-0 flex-row items-center justify-around p-2 font-bold text-[var(--white-color)] hover:text-white"
@@ -32,7 +32,7 @@ export default function Navbar() {
                                 <p className="ml-2 font-extrabold tracking-tight">KuchenGames</p>
                             </Link>
                             <div className="hidden md:block">
-                                <div className="ml-10 flex items-baseline space-x-4">
+                                <div ref={createRef()} className="ml-10 flex items-baseline space-x-4">
                                     <Link to="/" className={currentPath === '/' ? style_link_active : style_link}>
                                         Home
                                     </Link>
@@ -87,9 +87,9 @@ export default function Navbar() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    {(ref) => (
+                    {() => (
                         <div className="md:hidden" id="mobile-menu">
-                            <div ref={ref} className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                            <div ref={createRef()} className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                                 <Link to="/" className={currentPath === '/' ? style_dd_link_active : style_dd_link}>
                                     Home
                                 </Link>
