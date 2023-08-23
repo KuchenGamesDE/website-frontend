@@ -12,15 +12,15 @@ if ('serviceWorker' in navigator) {
                 });
             })
             .then((subscription) => {
-                fetch('/api/pushEndpoint', {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ endpoint: subscription.endpoint })
-                }).catch(console.error);
-                console.log('Subscribed: ' + subscription.endpoint);
+                // fetch('/api/pushEndpoint', {
+                //     method: 'POST',
+                //     headers: {
+                //         Accept: 'application/json',
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({ endpoint: subscription.endpoint })
+                // }).catch(console.error);
+                console.log('WebPush Subscribed: ' + subscription.endpoint);
             })
             .catch(function (error) {
                 if (error.name === 'NotAllowedError') {
@@ -31,8 +31,8 @@ if ('serviceWorker' in navigator) {
                 }
             });
 
-        navigator.serviceWorker.addEventListener('message', function (event) {
-            console.log(event.data.message);
-        });
+        // navigator.serviceWorker.addEventListener('message', function (event) {
+        //     console.log(event.data.message);
+        // });
     });
 }
