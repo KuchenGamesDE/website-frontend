@@ -50,9 +50,15 @@ const open = (member, roles) => {
     const role_name = role_data ? role_data.name : 'Undefined';
     const role_color = role_data ? role_data.color : '#f07b0781';
 
-    window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') close();
-    });
+
+    if (!window.closeListenerAdded) {
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') close();
+        });
+        window.closeListenerAdded = true;
+    }
+    
+
 
     let InfoContent = () => {
         return (
@@ -102,6 +108,7 @@ const open = (member, roles) => {
 };
 
 const close = () => {
+    if (!InfoRoot) return;
     InfoRoot.unmount();
     InfoRoot = undefined;
 };
