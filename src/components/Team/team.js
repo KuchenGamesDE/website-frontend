@@ -1,33 +1,38 @@
 export default {
     categories: [
         {
-            category: 'leader',
+            category: 'owner',
             weight: 100,
-            name: 'Server Leitung'
+            name: 'Inhaber'
+        },
+        {
+            category: 'admin',
+            weight: 90,
+            name: 'Admin Team'
         },
         {
             category: 'developer',
-            weight: 90,
+            weight: 80,
             name: 'Entwickler Team'
         },
         {
             category: 'builder',
-            weight: 80,
+            weight: 70,
             name: 'Builder Team'
         },
         {
             category: 'content',
-            weight: 70,
+            weight: 60,
             name: 'Content Team'
         },
         {
             category: 'moderator',
-            weight: 60,
+            weight: 50,
             name: 'Moderations Team'
         },
         {
             category: 'supporter',
-            weight: 50,
+            weight: 40,
             name: 'Support Team'
         }
     ],
@@ -64,35 +69,35 @@ export default {
     members: [
         {
             name: 'Attic9',
-            category: 'leader',
+            category: 'owner',
             role: 'owner',
             uuid: '1f241fd5-126f-446b-b77e-f80f30a74c4e',
             info: 'Keine info gegeben!'
         },
         {
             name: 'RedPanda',
-            category: 'leader',
+            category: 'owner',
             role: 'owner',
             uuid: '5dc43e20-ba22-4110-89f1-e3fe00a70c3f',
             info: 'Keine info gegeben!'
         },
         {
             name: 'Thomas U.',
-            category: 'leader',
+            category: 'admin',
             role: 'admin',
             uuid: '94d640d8-87c1-4bc1-971a-2b526906da36',
             info: 'Keine info gegeben!'
         },
         {
             name: 'TheApexClaw',
-            category: 'leader',
+            category: 'admin',
             role: 'admin',
             uuid: '9ed501a2-46ff-414d-820e-0e1347d52447',
             info: 'Keine info gegeben!'
         },
         {
             name: 'r3dspace',
-            category: 'leader',
+            category: 'admin',
             role: 'admin',
             uuid: 'c08290a6-5187-49ec-a734-9726ca01cb30',
             info: 'Keine info gegeben!'
