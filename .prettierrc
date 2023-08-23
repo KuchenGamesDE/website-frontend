@@ -6,5 +6,9 @@
     "printWidth": 180,
     "semi": true,
     "tabWidth": 4,
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "tailwindConfig": "./tailwind.config.js",
+    "plugins": [
+  		"prettier-plugin-tailwindcss"
+ 	]
 }

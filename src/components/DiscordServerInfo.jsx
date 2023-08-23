@@ -32,7 +32,7 @@ export default function DiscordServerInfo() {
         <div className="flex flex-row items-center justify-center">
             <div className="text-white"></div>
             <div className="text-white">
-                <p className="font-bold font-lgf">DISCORD SERVER</p>
+                <p className="font-lgf font-bold">DISCORD SERVER</p>
                 <p className="text-[var(--description-color)]">
                     <span className="font-bold text-[var(--main-color)]">{count > 0 ? count : 'Keine'}</span> Nutzer Online
                 </p>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, createRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 import { Link } from 'react-router-dom';
@@ -21,23 +21,23 @@ export default function Navbar() {
     return (
         <>
             <nav className="bg-zinc-800">
-                <div className="min-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="min-w-[90vw] flex items-center justify-between h-16">
-                        <div className="min-w-[60vw] md:min-w-[90vw] flex items-center justify-between">
+                <div className="mx-auto min-w-[90vw] px-4 sm:px-6 lg:px-8">
+                    <div className="flex h-16 min-w-[90vw] items-center justify-between">
+                        <div ref={createRef()} className="flex min-w-[60vw] items-center justify-between md:min-w-[90vw]">
                             <Link
                                 to="https://kuchengames.de"
-                                className="p-2 text-[var(--white-color)] hover:text-white flex-shrink-0 font-bold flex flex-row items-center justify-around"
+                                className="flex flex-shrink-0 flex-row items-center justify-around p-2 font-bold text-[var(--white-color)] hover:text-white"
                             >
                                 <img className="h-8 w-8" src={Logo} alt="Workflow" />
                                 <p className="ml-2 font-extrabold tracking-tight">KuchenGames</p>
                             </Link>
                             <div className="hidden md:block">
-                                <div className="ml-10 flex items-baseline space-x-4">
+                                <div ref={createRef()} className="ml-10 flex items-baseline space-x-4">
                                     <Link to="/" className={currentPath === '/' ? style_link_active : style_link}>
                                         Home
                                     </Link>
 
-                                    <Link to="https://dash.kuchengames.de" className={style_link + ' text-gray-500 pointer-events-none cursor-not-allowed'}>
+                                    <Link to="https://dash.kuchengames.de" className={style_link + ' pointer-events-none cursor-not-allowed text-gray-500'}>
                                         Dashboard
                                     </Link>
 
@@ -59,7 +59,7 @@ export default function Navbar() {
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                className="inline-flex cursor-pointer items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
@@ -87,14 +87,14 @@ export default function Navbar() {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    {(ref) => (
+                    {() => (
                         <div className="md:hidden" id="mobile-menu">
-                            <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                            <div ref={createRef()} className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                                 <Link to="/" className={currentPath === '/' ? style_dd_link_active : style_dd_link}>
                                     Home
                                 </Link>
 
-                                <Link to="https://dash.kuchengames.de" className={style_dd_link + ' text-gray-500 pointer-events-none cursor-not-allowed'}>
+                                <Link to="https://dash.kuchengames.de" className={style_dd_link + ' pointer-events-none cursor-not-allowed text-gray-500'}>
                                     Dashboard
                                 </Link>
 

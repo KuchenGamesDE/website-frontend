@@ -2,13 +2,13 @@ import TeamLayout from './TeamLayout';
 
 export default function Content() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-[100vh] select-text select-[var(--main-color)]">
-            <section className="p-3 w-screen min-h-[60vh] bg-[var(--s2-background)] flex flex-col justify-center items-center">
-                <div className="m-2 flex flex-col w-[100%] items-center">
+        <div className="select-[var(--main-color)] flex min-h-[100vh] select-text flex-col items-center justify-center">
+            <section className="flex min-h-[60vh] w-screen flex-col items-center justify-center bg-[var(--s2-background)] p-3">
+                <div className="m-2 flex w-[100%] flex-col items-center">
                     <TeamLayout />
                 </div>
             </section>
-            <section className="w-screen min-h-[100px]"></section>
+            <section className="min-h-[100px] w-screen"></section>
         </div>
     );
 }

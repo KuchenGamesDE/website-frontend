@@ -8,7 +8,7 @@ export default function FAQAccordion() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center">
             {data.map((faqElement, i) => {
                 return (
                     <AccordionLayout key={i + 1} title={faqElement.title} index={i + 1} activeIndex={activeIndex} setActiveIndex={setActiveIndex}>

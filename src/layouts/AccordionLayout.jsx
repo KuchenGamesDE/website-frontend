@@ -7,22 +7,22 @@ export default function AccordionLayout({ title, children, index, activeIndex, s
         <>
             <div
                 onClick={() => handleSetIndex(index)}
-                className="cursor-pointer border-[#ffffff2d] border-[1px] transition-all w-[90vw] flex justify-between py-3 px-5 mt-2 rounded hover:bg-[#2b314e81] bg-[#0d0f1881] backdrop-blur-md"
+                className="mt-2 flex w-[90vw] cursor-pointer justify-between rounded border-[1px] border-[#ffffff2d] bg-[#0d0f1881] px-5 py-3 backdrop-blur-md transition-all hover:bg-[#2b314e81]"
                 style={{
                     borderRadius: activeIndex === index ? '5px 5px 0 0' : '5px'
                 }}
             >
                 <div className="flex w-full justify-center">
-                    <div className="text-white font-bold">{title}</div>
+                    <div className="font-bold text-white">{title}</div>
                 </div>
                 <div className="flex items-center justify-center">
-                    {activeIndex === index ? <BiUpArrowCircle className="w-6 h-6" /> : <BiDownArrowCircle className="w-6 h-6" />}
+                    {activeIndex === index ? <BiUpArrowCircle className="h-6 w-6" /> : <BiDownArrowCircle className="h-6 w-6" />}
                 </div>
             </div>
 
             {activeIndex === index && (
                 <div
-                    className="cursor-default border-[#ffffff2d] border-[1px] border-t-0 w-[90vw] shadow-3xl text-center text-white rounded-b-md bg-[#555e8681] shadow-cyan-500/50 p-4 mb-6 backdrop-blur-md"
+                    className="shadow-3xl mb-6 w-[90vw] cursor-default rounded-b-md border-[1px] border-t-0 border-[#ffffff2d] bg-[#555e8681] p-4 text-center text-white shadow-cyan-500/50 backdrop-blur-md"
                     dangerouslySetInnerHTML={{ __html: children }}
                 >
                     {/* {children} */}
