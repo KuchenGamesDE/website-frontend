@@ -57,7 +57,7 @@ const open = (member, roles) => {
     let InfoContent = () => {
         return (
             <div className="fixed z-10 flex h-full w-full min-w-[300px] justify-center bg-[#00000027] backdrop-blur-sm">
-                <div className="relative m-auto flex flex-col rounded-md bg-[#46484c] p-5 pt-8 lg:flex-row">
+                <div className="relative m-auto flex max-h-[95vh] flex-col overflow-y-scroll rounded-md bg-[#46484c] p-5 pt-8 lg:flex-row">
                     <AiOutlineCloseSquare size={35} className="hover:text-gray absolute right-1 top-1 cursor-pointer  text-white" onClick={close} />
                     <div className="flex flex-col justify-center">
                         <div className="my-auto ml-5 flex flex-col">
