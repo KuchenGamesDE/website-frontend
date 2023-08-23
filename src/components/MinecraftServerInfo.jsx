@@ -34,16 +34,24 @@ export default function MinecraftServerInfo() {
             <div className="text-white">
                 <p className="font-lg font-bold">MINECRAFT SERVER</p>
                 <p className="text-[var(--description-color)]">
-                    {count > 0 ? (
-                        <>
-                            <span className="font-bold text-[var(--main-color)]">{count}</span>
-                            {' / '}
-                            <span className="font-bold text-[var(--main-color)]">{max}</span>
-                        </>
+                    {max === 0 ? (
+                        <span>
+                            Wartungsmodus <span className="font-bold text-[var(--main-color)]">{count}</span> Online
+                        </span>
                     ) : (
-                        <span className="font-bold text-[var(--main-color)]">Keine</span>
-                    )}{' '}
-                    Spieler Online
+                        <span>
+                            {count > 0 ? (
+                                <>
+                                    <span className="font-bold text-[var(--main-color)]">{count}</span>
+                                    {' / '}
+                                    <span className="font-bold text-[var(--main-color)]">{max}</span>
+                                </>
+                            ) : (
+                                <span className="font-bold text-[var(--main-color)]">Keine</span>
+                            )}{' '}
+                            Spieler Online
+                        </span>
+                    )}
                 </p>
             </div>
         </div>

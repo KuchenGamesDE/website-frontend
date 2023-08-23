@@ -44,7 +44,7 @@ export default function Header() {
             <div className="flex min-h-[calc(80vh)] w-[90vw] flex-col items-center justify-center md:w-[35vw]">
                 <img className="float max-w-[400px]" src={Logo} alt="Logo" />
 
-                <div className="mt-4 flex w-full flex-row items-center justify-around rounded-md bg-gray-400 bg-opacity-10 bg-clip-padding p-4 backdrop-blur-lg backdrop-filter">
+                <div className="mt-4 flex w-full flex-row flex-wrap items-center justify-around rounded-md bg-gray-400 bg-opacity-10 bg-clip-padding p-4 text-center backdrop-blur-lg backdrop-filter">
                     <DiscordServerInfo />
                     <MinecraftServerInfo />
                 </div>
