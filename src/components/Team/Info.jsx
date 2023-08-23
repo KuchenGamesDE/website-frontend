@@ -16,7 +16,7 @@ const fullSequenceAnimation = new FunctionAnimation((player, deltaTime) => {
     const maxWinkRotation = Math.PI / 8; // Maximum rotation angle for winking
     const maxHeadNod = Math.PI / 6; // Maximum rotation angle for head nodding
 
-    console.log(animationProgress);
+    // console.log(animationProgress);
 
     if (animationProgress < 0.25) {
         // Raise arm
@@ -97,14 +97,13 @@ const open = (member, roles) => {
     };
 
     let InfoRootElement = document.getElementById('info-root');
-    InfoRoot = createRoot(InfoRootElement);
-
-    let Info = InfoRoot.render(<InfoContent />);
-    Info = Info;
+    if (!InfoRoot) InfoRoot = createRoot(InfoRootElement);
+    InfoRoot.render(<InfoContent />);
 };
 
 const close = () => {
     InfoRoot.unmount();
+    InfoRoot = undefined;
 };
 
 export default {
