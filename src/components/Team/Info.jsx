@@ -1,7 +1,8 @@
+import { useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
-import { AiOutlineCloseSquare } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import ReactSkinview3d from 'react-skinview3d';
-import { IdleAnimation, WalkingAnimation, RunningAnimation, FunctionAnimation, NameTagObject } from 'skinview3d';
+import { IdleAnimation, FunctionAnimation } from 'skinview3d';
 
 var InfoRoot = undefined;
 
@@ -58,10 +59,25 @@ const open = (member, roles) => {
     }
 
     let InfoContent = () => {
+        const ref = useRef(null);
+
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)) {
+                close();
+            }
+        };
+
+        useEffect(() => {
+            document.addEventListener('click', handleClickOutside, true);
+            return () => {
+                document.removeEventListener('click', handleClickOutside, true);
+            };
+        }, []);
+
         return (
             <div className="fixed z-10 flex h-full w-full min-w-[300px] justify-center bg-[#00000027] backdrop-blur-sm">
-                <div className="relative m-auto flex max-h-[95vh] flex-col overflow-y-scroll rounded-md bg-[#46484c] p-5 pt-10 lg:flex-row">
-                    <AiOutlineCloseSquare size={35} className="hover:text-gray absolute right-1 top-1 cursor-pointer  text-white" onClick={close} />
+                <div ref={ref} className="relative m-auto flex max-h-[95vh] flex-col overflow-y-scroll rounded-md bg-[#46484c] p-5 pt-10 lg:flex-row">
+                    <AiOutlineClose size={35} className="hover:text-gray absolute right-1 top-1 cursor-pointer  text-white" onClick={close} />
                     <div className="flex flex-col justify-center">
                         <div className="my-auto ml-5 flex flex-col">
                             <div className="flex font-bold">{name}</div>
