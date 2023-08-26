@@ -50,15 +50,12 @@ const open = (member, roles) => {
     const role_name = role_data ? role_data.name : 'Undefined';
     const role_color = role_data ? role_data.color : '#f07b0781';
 
-
     if (!window.closeListenerAdded) {
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') close();
         });
         window.closeListenerAdded = true;
     }
-    
-
 
     let InfoContent = () => {
         return (
@@ -88,7 +85,7 @@ const open = (member, roles) => {
                                 onReady={({ viewer }) => {
                                     viewer.fov = 70;
                                     viewer.zoom = 0.7;
-                                    viewer.nameTag = new NameTagObject(name, { textStyle: role_color });
+                                    // viewer.nameTag = new NameTagObject(name, { textStyle: role_color });
                                     viewer.animation = new IdleAnimation();
                                 }}
                             />
