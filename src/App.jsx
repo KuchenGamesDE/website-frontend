@@ -11,7 +11,7 @@ import Team from './routes/Team';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+export default function App() {
     return (
         <>
             <BrowserRouter className="min-h-[100vh]">
@@ -40,5 +40,3 @@ function App() {
         </>
     );
 }
-
-export default App;

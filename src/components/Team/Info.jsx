@@ -40,7 +40,7 @@ const fullSequenceAnimation = new FunctionAnimation((player, deltaTime) => {
 });
 
 const open = (member, roles) => {
-    const skin_api_uri = 'https://mc-heads.net/skin/';
+    const skin_api_uri = 'https://crafatar.com/skins/';
 
     const name = member.name;
     const role = member.role;

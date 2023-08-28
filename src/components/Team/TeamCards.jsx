@@ -4,7 +4,7 @@ import { BsThreeDots } from 'react-icons/bs';
 import Info from './Info';
 
 export default function TeamCards({ members, roles }) {
-    const skin_api_uri = 'https://mc-heads.net/head/';
+    const skin_api_uri = 'https://crafatar.com/renders/head/';
 
     const paginateArray = (array, pageSize) => {
         const paginatedArray = [];
@@ -57,7 +57,7 @@ export default function TeamCards({ members, roles }) {
                                         opacity: isHovered ? '0.7' : '1'
                                     }}
                                 >
-                                    <img src={`${skin_api_uri}${uuid}`} alt="skin" />
+                                    <img src={`${skin_api_uri}${uuid}?overlay`} alt="skin" />
                                 </div>
                                 <div
                                     className="pb-2 pt-3 text-sm font-bold transition-all duration-500"
