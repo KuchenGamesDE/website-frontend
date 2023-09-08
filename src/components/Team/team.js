@@ -93,7 +93,7 @@ export default {
             category: 'admin',
             role: 'admin',
             uuid: '9ed501a2-46ff-414d-820e-0e1347d52447',
-            info: ' Hai, ich bin Sabrina. Ich bin Administratorin auf dem KuchenGames Netzwerk.\nIch leite das Content- und Designerteam.'
+            info: 'Hai, ich bin Sabrina. Ich bin Administratorin auf KuchenGames. Zu meinen Aufgaben zählen unter anderem die Leitung des Content- und Builderteams. Zudem bin ich zusätzlich als Builder und Designerin tätig. Solltet ihr mich mal auf dem Server sehen, könnt ihr gerne zu mir kommen und ein Screen machen. Ab und zu verteile ich auch Kekse an artige Spieler. Aber krümelt bitte nicht so viel. Wir sehen uns auf KuchenGames.'
         },
         {
             name: 'r3dspace',
@@ -116,13 +116,6 @@ export default {
             role: 'developer',
             uuid: 'a6a85419-f0d1-45f0-afa0-cb1396cfaa8f',
             info: 'Lucifer: einst Weltherrschaftspläne, jetzt Code-Zauberer.\n\nAus dem Höllenschlund in Deutschland stammend, jongliert er mit Aufgaben, zaubert Plugins und Websites für unser Minecraft-Netzwerk.\nTeuflisch gut im Leiten des Entwicklerteams und im Erkennen von Entwicklertalenten.\n\nHölle ja, er ist unser Game-Changer auf KuchenGames.de!'
-        },
-        {
-            name: 'GreenTiger',
-            category: 'developer',
-            role: 'developer',
-            uuid: 'bc019c8d-5c35-4e9d-a8cc-a4df565eb5ea',
-            info: '[nothing to see here :)]'
         },
         {
             name: 'Jessica_Melody',
@@ -167,7 +160,7 @@ export default {
             info: 'Ich bin SchnoepelOG, Mitglied im Content- und Supporter-Team. Meine größte Begeisterung liegt im Videoschneiden, wo ich meine kreative Ader auslebete.'
         },
         {
-            name: 'Funki8988',
+            name: 'Marc',
             category: 'moderator',
             role: 'moderator',
             uuid: 'e3f8e6c3-5b35-4e30-8aa3-d5a5160c9cfd',
@@ -193,13 +186,6 @@ export default {
             role: 'supporter',
             uuid: '03420c94-9130-4a8a-89be-a09a5a262f93',
             info: 'Maurice, widmet sich dem Beruf des Fleischers!'
-        },
-        {
-            name: 'Maxymix',
-            category: 'supporter',
-            role: 'supporter',
-            uuid: '3e2c38f0-0ad3-4ec6-8f94-53ca03d97805',
-            info: 'Keine info gegeben!'
         },
         {
             name: '.Luca',
