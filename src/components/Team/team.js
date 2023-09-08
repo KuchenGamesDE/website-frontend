@@ -21,14 +21,14 @@ export default {
             name: 'Builder Team'
         },
         {
-            category: 'content',
+            category: 'moderator',
             weight: 60,
-            name: 'Content Team'
+            name: 'Moderations Team'
         },
         {
-            category: 'moderator',
+            category: 'content',
             weight: 50,
-            name: 'Moderations Team'
+            name: 'Content Team'
         },
         {
             category: 'supporter',
