@@ -14,7 +14,18 @@ export default defineConfig({
             importScripts: ['./src/serviceWorker.js'],
             workbox: {
                 globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-                maximumFileSizeToCacheInBytes: 5 * 1024 * 1024 // 5 MB max file bytes pre caching
+                maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB max file bytes pre caching
+                runtimeCaching: [
+                    {
+                        urlPattern: /\/src\/components\/Team\/team\.js/,
+                        handler: 'NetworkOnly'
+                    },
+                    {
+                        urlPattern: /\/src\/components\/Home\/FAQData\.js/,
+                        handler: 'NetworkOnly'
+                    }
+                    // Add more patterns if needed
+                ]
             }
         })
     ]
