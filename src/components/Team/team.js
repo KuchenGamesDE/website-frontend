@@ -20,19 +20,24 @@ export default {
             weight: 70,
             name: 'Builder Team'
         },
-        {
-            category: 'moderator',
-            weight: 60,
-            name: 'Moderations Team'
-        },
+        // {
+        //     category: 'moderator',
+        //     weight: 60,
+        //     name: 'Moderations Team'
+        // },
         {
             category: 'content',
             weight: 50,
             name: 'Content Team'
         },
         {
-            category: 'supporter',
+            category: 'designer',
             weight: 40,
+            name: 'Design Team'
+        },
+        {
+            category: 'supporter',
+            weight: 30,
             name: 'Support Team'
         }
     ],
@@ -55,7 +60,11 @@ export default {
         },
         content: {
             name: 'Content',
-            color: '#b83983'
+            color: '#cc00ff'
+        },
+        designer: {
+            name: 'Designer',
+            color: '#7b0fb8'
         },
         moderator: {
             name: 'Moderator',
@@ -102,14 +111,6 @@ export default {
             uuid: 'c08290a6-5187-49ec-a734-9726ca01cb30',
             info: "Hi 👋🏽. I'm r3dspace, a system administrator based out of Germany working as an second and third level network engineer.\n\nI create, maintain and update networks all day long.\nI'm passionate about side projects and helping others improve their craft and networks."
         },
-
-        {
-            name: 'SMIBII',
-            category: 'developer',
-            role: 'developer',
-            uuid: '6201b768-961e-499b-9306-ce4750d00118',
-            info: 'Hallo ich bin SMIBII,\nIch bin der coolste aus diesem Team!\n\nDu glaubst mir nicht?\nDein pech!'
-        },
         {
             name: 'Lucifer',
             category: 'developer',
@@ -118,18 +119,11 @@ export default {
             info: 'Lucifer: einst Weltherrschaftspläne, jetzt Code-Zauberer.\n\nAus dem Höllenschlund in Deutschland stammend, jongliert er mit Aufgaben, zaubert Plugins und Websites für unser Minecraft-Netzwerk.\nTeuflisch gut im Leiten des Entwicklerteams und im Erkennen von Entwicklertalenten.\n\nHölle ja, er ist unser Game-Changer auf KuchenGames.de!'
         },
         {
-            name: 'Jessica_Melody',
-            category: 'builder',
-            role: 'builder',
-            uuid: 'c6b69659-493e-4610-96d4-2b74b06a0f74',
-            info: 'Jessica_Melody, Bautamleitung.\n\nBaut gerne "kleine" verrückte Bauwerke. Ein Kathedrälchen ist erst der Anfang. Musik, Kunst/Architektur, wie Geschichte ist ihr Leben.'
-        },
-        {
-            name: 'mmp12345',
-            category: 'builder',
-            role: 'builder',
-            uuid: 'dd8ecedc-e17d-4d01-82e8-0adb12b482e1',
-            info: 'Name: Onur, Geschichte :Er ist Törke.'
+            name: 'DevOrange',
+            category: 'developer',
+            role: 'developer',
+            uuid: '1d328e2d-2a56-4ea7-ac63-81f9379e259c',
+            info: 'Ich bin DevOrange, Developer auf Kuchengames. Ich versuche mit dem Developerteam und dem Rest des Teams ein gutes Spielerlebnis zu schaffen. Für fragen steht euch den Support unserer Supporter zu Verfügung.'
         },
         {
             name: '9xeuzin',
@@ -139,11 +133,11 @@ export default {
             info: "Hello, I'm Will.\n\nI'm passionate about building in Minecraft.\nI've been developing this skill for almost 1 year and 6 months, and I'm studying to reach the level of a level designer.\nI've had the honor of being part of studios like Null Forge and LegacyMC.\nMy passion for creating in Minecraft motivates me to keep learning and improving in this exciting world of virtual construction"
         },
         {
-            name: 'TheOkekw',
+            name: '_GreenTee',
             category: 'builder',
             role: 'builder',
-            uuid: 'd74c7772-ba2c-4e7c-a647-41a786907d5f',
-            info: 'TheOkekw.\nMinecraft Builder seit ca. 3 Jahren. Kann in jedem Themen Bereich bauen.'
+            uuid: '63677075-5c26-4ac5-8aad-5b793588a86b',
+            info: 'Moin ich bin Green. ich bin aktiver Builder auf Kuchengames.de und helfe nebenbei dem content Team. ^^'
         },
         {
             name: 'LeEnte',
@@ -153,18 +147,25 @@ export default {
             info: 'Quack!'
         },
         {
-            name: 'SchnoepelOG',
+            name: 'Marc',
             category: 'content',
             role: 'content',
-            uuid: '05cd2c18-3374-4f5e-858e-d8845ffd8b34',
-            info: 'Ich bin SchnoepelOG, Mitglied im Content- und Supporter-Team. Meine größte Begeisterung liegt im Videoschneiden, wo ich meine kreative Ader auslebete.'
-        },
-        {
-            name: 'Marc',
-            category: 'moderator',
-            role: 'moderator',
             uuid: 'e3f8e6c3-5b35-4e30-8aa3-d5a5160c9cfd',
             info: 'Dieses Rätselhafte Wesen wurde eines Tages einfach in der Stadt entdeckt.\nNiemand hat ihn seit dem mehr einen "schrägen Vogel" genannt. Dafür hat er gesorgt. Heute zaubert er einzigartige Musik für die Maps wie zum Beispiel den Dungeon oder die Mine.\nAußerdem sorgt er auf dem Server für Recht und Ordnung - sowohl Ingame, als auch auf Discord.'
+        },
+        {
+            name: 'Anton',
+            category: 'content',
+            role: 'content',
+            uuid: 'f352db9b-920c-4225-8b05-8c683dd7f6db',
+            info: 'Hallo bin Anton 18 Jahre alt und in meiner Freizeit gehe ich ins Gym.'
+        },
+        {
+            name: 'SMIBII',
+            category: 'designer',
+            role: 'designer',
+            uuid: '6201b768-961e-499b-9306-ce4750d00118',
+            info: 'Hallo ich bin SMIBII,\nIch bin der coolste aus diesem Team!\n\nDu glaubst mir nicht?\nDein pech!'
         },
         {
             name: 'Blacky',
@@ -178,27 +179,6 @@ export default {
             category: 'supporter',
             role: 'supporter',
             uuid: '1d6cb936-3141-4518-b011-6e443efdb32d',
-            info: 'Keine info gegeben!'
-        },
-        {
-            name: 'Maurice',
-            category: 'supporter',
-            role: 'supporter',
-            uuid: '03420c94-9130-4a8a-89be-a09a5a262f93',
-            info: 'Maurice, widmet sich dem Beruf des Fleischers!'
-        },
-        {
-            name: '.Luca',
-            category: 'supporter',
-            role: 'supporter',
-            uuid: '9b37db61-717e-41e9-82e8-f0b193f3dc53',
-            info: 'Ich bin ein Supporter von KuchenGames.de und helfe spielern, wenn sie ein Problem haben :)'
-        },
-        {
-            name: 'BlackUnityGamer',
-            category: 'supporter',
-            role: 'supporter',
-            uuid: 'ceb0a468-5e71-4f32-97df-e0e5c434527a',
             info: 'Keine info gegeben!'
         }
     ]
